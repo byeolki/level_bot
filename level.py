@@ -1,5 +1,5 @@
 from nextcord.ext import commands
-import nextcord, datetime, sqlite3, random
+import nextcord, sqlite3, random
 from easy_pil import *
 
 intents = nextcord.Intents.all()
@@ -7,7 +7,6 @@ client = commands.Bot(command_prefix='접두사 입력', intents=intents)
 
 @client.event
 async def on_ready():
-    i = datetime.datetime.now()
     print(f"{client.user.name}봇은 준비가 완료 되었습니다.")
     print(f"[!] 참가 중인 서버 : {len(client.guilds)}개의 서버에 참여 중")
     print(f"[!] 이용자 수 : {len(client.users)}와 함께하는 중")
